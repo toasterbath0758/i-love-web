@@ -1,0 +1,44 @@
+<!-- #function -->
+The function declaration creates a binding of a new function to a given name.
+You can also define functions using the function expression.
+(execute -> call) (code hergebruiken -> single responsibility principle)
+
+
+
+<!-- #arguments -->
+arguments is an array-like object 
+accessible inside functions that contains 
+the values of the arguments passed to that function.
+(array like object -> waardes die je aan de function doorgeeft)
+
+
+<!-- #return -->
+The return statement ends function execution 
+and specifies a value to be returned to the function caller.
+(wat de function teruggeeft)
+
+<!-- #function expression -->
+The function keyword can be used to define a function inside an expression.
+You can also define functions using the function declaration or the arrow syntax.
+(const pipo = function(){}) = expression
+
+
+<!-- #function declaration -->
+A function expression is very similar to, and has almost the same syntax as, 
+a function declaration. The main difference between a function expression and a function declaration is 
+the function name, which can be omitted in function expressions to create anonymous functions. 
+A function expression can be used as an IIFE (Immediately Invoked Function Expression) 
+which runs as soon as it is defined. See also the chapter about functions for more information.
+(function pipo (){})
+
+<!-- #Arrow function (expressions) -->
+An arrow function expression is a compact alternative to a traditional function expression, 
+with some semantic differences and deliberate limitations in usage:
+Arrow functions don't have their own bindings to this, arguments, or super, and should not be used as methods.
+Arrow functions cannot be used as constructors. Calling them with new throws a TypeError. 
+They also don't have access to the new.target keyword.
+Arrow functions cannot use yield within their body and cannot be created as generator functions.
+const pipo=()=){}
+
+function pipo(){} = function body
+
