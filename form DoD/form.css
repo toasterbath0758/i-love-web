@@ -1,0 +1,58 @@
+* {
+    font-family: Arial;
+}
+
+P {
+    padding: none;
+    margin: none;
+}
+
+section {
+    border: solid black 1px;
+    padding: 1em;
+    margin-top: 1em;
+    /* max-width: 320px; */
+    justify-self: center;
+    margin-bottom: 1em;
+}
+
+.smallInput {
+    margin-bottom: 1em;
+}
+
+input {
+    display: flex;
+}
+
+input:invalid {
+    border: solid orangered 3px;
+}
+
+.radio {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 72px;
+    margin: none;
+
+}
+
+fieldset {
+    margin: 0;
+    padding: 0;
+}
+
+label {
+    min-width: 100px;
+    padding: 0.5em 0 0.5em 0;
+}
+
+#ChooseFile {
+    padding: 0.5em 0 0.5em 0;
+}
+
+#bericht {
+    border: solid black 1px;
+    margin-bottom: 0.5em;
+    width: 286.5px;
+    height: 100px;
+}

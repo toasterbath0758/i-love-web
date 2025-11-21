@@ -1,0 +1,64 @@
+@font-face {
+    font-family: PixerMCBixer;
+    src: url(url(../fonts-copy/PixerMCBixerV5-Regular.ttf));
+}
+
+h1,
+p,
+a,
+label,
+input,
+legend {
+    font-family: PixerMCBixer;
+}
+
+h1 {
+    font-size: 1.5em;
+}
+
+p {
+    font-size: 1em;
+}
+
+.big {
+    font-size: 200%;
+    letter-spacing: 20%;
+    line-height: 120%;
+}
+
+input {
+    margin-top: 0.5em;
+    border-radius: 0em;
+}
+
+input:invalid {
+  border: solid red 3px;
+}
+
+fieldset {
+    margin: 0;
+    padding: 1em;
+}
+
+label {
+  display: block;
+  margin-top: 1rem;
+}
+
+section {
+    border: solid black 3px;
+    padding: 1em;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.italic {
+    font-style: oblique;
+}
+
+.italicBold {
+    font-style: oblique;
+    font-weight: bold;
+}

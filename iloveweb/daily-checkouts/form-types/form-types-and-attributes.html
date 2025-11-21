@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="form-types-and-attributes.css">
+</head>
+
+<body>
+    <section><a href="/iloveweb/daily-checkouts/Sprints/Sprint-4.html"><-- terug naar daily checkout page</a></section>
+    <section>
+        <h1>Waarom heeft een input een label nodig?</h1>
+        <p>
+            Een form heeft een label nodig omdat het anders
+            onduidelijk is wat er in het form moet worden geschreven
+            zodra de placeholdertext weg is als iemand in het inputveld iets typt.
+        </p>
+        <label for="FirstName">Name (2 to 12 characters):</label>
+
+        <input type="text" id="FirstName" name="FirstName" placeholder="naam" required minlength="2" maxlength="12"
+            size="10" />
+    </section>
+
+    <section>
+        <h1>Wat doe je met de attributen type, autocomplete, inputmode en enterkeyhint?</h1>
+        <p>
+            Het global atribute inputmode is een opgesomd atribute
+            dat aangeeft welk type gegevens de gebruiker kan invoeren
+            tijdens het bewerken van het element of de inhoud ervan.
+        </p>
+
+        <label for="firstName">First Name:</label>
+        <input name="firstName" placeholder="naam" id="firstName" type="text" autocomplete="given-name" />
+
+        <label for="lastName">Last Name:</label>
+        <input name="lastName" placeholder="achternaam" id="lastName" type="text" autocomplete="family-name" />
+
+        <label for="email">Email:</label>
+        <input name="email" placeholder="email" id="email" type="email" autocomplete="off" />
+    </section>
+
+    <section>
+        <h1>wat doen fieldsets en legends in een formulier</h1>
+        <p>
+            De fieldset is een box om een form heen
+            De legend zit op de rand van de fieldset box als styling.
+        </p>
+        
+        <form>
+            <fieldset>
+                <legend>Choose your favorite monster</legend>
+
+                <input type="radio" id="White" name="monster" value="W" />
+                <label for="White">White</label><br />
+
+                <input type="radio" id="Gold" name="monster" value="G" />
+                <label for="Gold">Gold</label><br />
+
+                <input type="radio" id="Pink" name="monster" value="P" />
+                <label for="Pink">Pink</label>
+            </fieldset>
+        </form>
+    </section>
+
+
+    <section>
+        <h1>wat doen required, maxlength, min, max, step?</h1>
+        <p>
+            required zorgt ervoor dat je niet doorkan totdat het required textveld is ingevuld
+        </p>
+
+        <form>
+            <div class="group">
+                <input type="text" required />
+                <label>Required</label>
+            </div>
+            <input type="submit" />
+        </form>
+    </section>
+
+    <section>
+        <p><span class="italicBold">max-length</span> en <span class="italicBold">minlength</span></p>
+        <p>zorgen ervoor dat de minimale en maximale hoeveelheid niet kunnen worden overschreden.</p>
+
+        <label for="name">Your name (a minimum of 4 to a maximum of 8 characters):</label>
+
+        <input type="text" id="name" name="name" placeholder="naam" required minlength="4" maxlength="8" size="10" />
+    </section>
+    <section>
+        <h1>Welke input pseudo-classes ken je nog niet? Maak met allemaal een demo'tje</h1>
+        <p>
+
+        </p>
+    </section>
+    <section>
+        <p class="big">
+            abcdefghijklmnopqrstuvwxyz
+            <br>
+            ABCDEFGHIJKLMNOPQRSTUVWXYZ
+            <br>
+            1234567890
+            <br>
+            /±!@#$%^&*()_+-=§£¡¢§¶ªº´®¥¨©¬æ«`µ
+            <br>
+            ☺☹
+
+            "halo" + - _
+        </p>
+    </section>
+</body>
+
+</html>
+
+ctrl shift p, format document

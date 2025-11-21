@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inputs</title>
+    <link rel="stylesheet" href="inputs.css">
+</head>
+<body>
+
+    <label class="PixerMCBixer" for="name">Name (4 to 12 characters):</label>
+
+<input class="PixerMCBixer"
+  type="text"
+  id="name"
+  name="name"
+  required
+  minlength="4"
+  maxlength="12"
+  size="10" />
+
+<form>
+  <label class="PixerMCBixer" for="url">Enter an https:// URL:</label>
+  <input class="PixerMCBixer"
+    type="url"
+    name="url"
+    id="url"
+    placeholder="https://example.com"
+    pattern="https://.*"
+    size="30"
+    required />
+</form>
+
+<label for="camp-week">Choose a week in the lords year 2025:</label>
+
+<input
+  type="week"
+  name="week"
+  id="camp-week"
+  min="2025-w1"
+  max="2025-w52"
+  required />
+
+</body>
+</html>

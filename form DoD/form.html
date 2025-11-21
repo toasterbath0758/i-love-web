@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../form DoD/form.css">
+</head>
+
+<body>
+    <section>
+        <p>
+            Stuur nieuwtjes in van uw buurt
+        </p>
+
+        <label for="Voornaam">Naam:</label>
+        <input class="smallInput" name="Voornaam" placeholder="naam" id="Voornaam" type="text" autocomplete="given-name" />
+
+        <label for="AchterNaam">Achternaam:</label>
+        <input class="smallInput" name="AchterNaam" placeholder="achternaam" id="AchterNaam" type="text" autocomplete="family-name" />
+
+        <label for="email">Email:</label>
+        <input class="smallInput" name="email" placeholder="email" id="email" type="email" autocomplete="off" />
+
+        <form>
+            <fieldset>
+                <div class="radio">
+                    <input type="radio" id="Zuidoost" name="Zuidoost" value="Zuidoost" checked />
+                    <label for="Zuidoost">Zuidoost</label>
+                </div>
+                <div class="radio">
+                    <input type="radio" id="Oost" name="Oost" value="Oost" checked />
+                    <label for="Oost">Oost</label>
+                </div>
+                <div class="radio">
+                    <input type="radio" id="Nieuw-West" name="Nieuw-West" value="Nieuw-West" checked />
+                    <label for="Nieuw-West">Nieuw-West</label>
+                </div>
+            </fieldset>
+        </form>
+
+        <!-- idee van Anass -->
+
+        <section>
+            <label for="bericht">kies een foto</label>
+
+            <input type="file" id="ChooseFile" name="ChooseFile" accept="image/png, image/jpeg" />
+        </section>
+
+        <label for="name">Bericht</label>
+
+        <input class="bericht" type="text" id="bericht" required />
+
+        <input type="submit" />
+    </section>
+</body>
+
+</html>
