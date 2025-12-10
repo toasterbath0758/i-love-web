@@ -1,19 +1,34 @@
 * {
     font-family: Arial;
+    line-height: 1.4em;
 }
 
-P {
+h1 {
+    font-size: 1.5em;
+}
+
+p {
+    width: 75ch;
     padding: none;
     margin: none;
 }
 
 section {
     border: solid black 1px;
+    width: 250px;
     padding: 1em;
     margin-top: 1em;
-    /* max-width: 320px; */
     justify-self: center;
     margin-bottom: 1em;
+}
+
+.text-area {
+    width: 250px;
+}
+
+.WLW {
+    width: 1000px;
+    
 }
 
 .smallInput {

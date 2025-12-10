@@ -15,10 +15,12 @@
         </p>
 
         <label for="Voornaam">Naam:</label>
-        <input class="smallInput" name="Voornaam" placeholder="naam" id="Voornaam" type="text" autocomplete="given-name" />
+        <input class="smallInput" name="Voornaam" placeholder="naam" id="Voornaam" type="text"
+            autocomplete="given-name" />
 
         <label for="AchterNaam">Achternaam:</label>
-        <input class="smallInput" name="AchterNaam" placeholder="achternaam" id="AchterNaam" type="text" autocomplete="family-name" />
+        <input class="smallInput" name="AchterNaam" placeholder="achternaam" id="AchterNaam" type="text"
+            autocomplete="family-name" />
 
         <label for="email">Email:</label>
         <input class="smallInput" name="email" placeholder="email" id="email" type="email" autocomplete="off" />
@@ -43,17 +45,17 @@
         <!-- idee van Anass -->
 
         <section>
+
             <label for="bericht">kies een foto</label>
 
             <input type="file" id="ChooseFile" name="ChooseFile" accept="image/png, image/jpeg" />
+        <div>
+            <label for="text-area">Bericht</label>
+        </div>
+            <textarea class="text-area" id="text-area" rows="4" required></textarea>
+
+            <input type="submit">
         </section>
-
-        <label for="name">Bericht</label>
-
-        <input class="bericht" type="text" id="bericht" required />
-
-        <input type="submit" />
-    </section>
 </body>
 
 </html>
