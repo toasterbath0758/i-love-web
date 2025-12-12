@@ -1,88 +1,23 @@
 * {
     line-height: 1.4em;
     margin: 0;
+    background-color: black;
 }
 
 @font-face {
-    font-family: PixerMCBixer;
+    font-family:PixerMCBixer;
     src: url(/fonts/PixerMCBixerV5-Regular.ttf);
 }
-
-a {
-    font-family: PixerMCBixer;
-    font-weight: bold;
-}
-
-h1 {
-    font-family: arial;
-    font-size: 20px;
-
-}
-
-p {
-    font-family: arial;
-    font-size: medium;
-
-
-}
-
-.PixerMCBixer {
-    font-family: PixerMCBixer;
-}
-
-.small {
-    font-size: 80%;
-}
-
-.bold {
-    font-weight: bold;
-}
-
-#navList {
-    width: 100%;
-    padding: 0 0 0 0;
-    display: flex;
-    gap: 0em;
-    justify-content: center;
-    translate: center;
-    white-space: nowrap;
-    padding-left: 1.5em;
-    padding-right: 1.5em;
-    flex-wrap: wrap;
-
-}
-
-/* knoppen in de nav */
-.navKnop {
-    color: white;
-    padding-right: 2rem;
-    translate: 0 0;
-    padding: 0.5em 3em 0.5em 0.5em;
-}
-
-/* hover function met vlaggetje clipper */
-.navKnop:hover,
-.navKnop:focus-visible {
-    background-color: white;
-    color: rgb(51 52 103);
-    /* padding-right: 2rem; */
-    clip-path: polygon(90% 0, calc(95% - 1.5em) 50%, 90% 100%, 0 100%, 0 0);
-    
-}
-
-/* kleurverrandering als je klikt op de navKnop */
-.navKnop:active {
-    color: black;
-}
-
 
 header {
     font-family: arial;
     width: 100%;
+    outline: solid lime;
+    margin-bottom: 1em;
 }
 
 ul#navList {
-    background-color: black;
+    
     padding: 2em;
 }
 
@@ -98,9 +33,13 @@ li a {
 body {
     background: whitesmoke;
     width: 100%;
+    background-color: black;
 }
 
 main {
+    outline: solid lime;
+    color: lime;
+
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -115,8 +54,78 @@ main {
     }
 }
 
+a {
+    font-family: PixerMCBixer;
+    font-weight: bold;
+    color: white;
+}
+
+h1 {
+    font-family: arial;
+    font-size: 20px;
+    writing-mode: vertical-lr;
+    rotate: 180deg;
+    justify-items: flex-end;
+    align-self: start;
+    padding-bottom: 0.5em;
+
+    font-family: PixerMCBixer;
+}
+
+p {
+    font-family: arial;
+    font-size: medium;
+    /* width: 75ch; */
+    width: 35ch;
+    
+    font-family: PixerMCBixer;
+}
+
+.small {
+    font-size: 80%;
+}
+
+.bold {
+    font-weight: 900;
+    padding-top: 1em;
+    
+}
+
+#navList {
+    width: 100%;
+    padding: 0 0 0 0;
+    display: flex;
+    gap: 0em;
+    justify-content: center;
+    translate: center;
+    white-space: nowrap;
+    flex-wrap: wrap;
+}
+
+/* knoppen in de nav */
+.navKnop {
+    color: white;
+    padding-right: 2rem;
+    translate: 0 0;
+    padding: 0.5em 3em 0.5em 0.5em;
+}
+
+/* hover function met vlaggetje clipper */
+.navKnop:hover,
+.navKnop:focus-visible {
+    background-color: limegreen;
+    color: black;
+    /* padding-right: 2rem; */
+    clip-path: polygon(90% 0, calc(95% - 1.5em) 50%, 90% 100%, 0 100%, 0 0);
+    
+}
+
+/* kleurverrandering als je klikt op de navKnop */
+.navKnop:active {
+    color: black;
+}
+
 section {
-    width: 1000px;
     display: grid;
     grid-template-columns: 1fr;
     gap: 1em;
@@ -127,8 +136,9 @@ section {
 .checkoutMetLinks {
     display: flex;
     gap: 1em;
-    padding: 1em 3em 1em 3em;
+    padding: 1em;
     background-color: antiquewhite;
+
     border-radius: 5px;
 
     @media (min-width: 800px) {
@@ -138,27 +148,19 @@ section {
 }
 
 /* als de checkout geen link heeft krijgt het deze tag */
-.checkoutGeenLinks {
+.checkout {
     display: flex;
     gap: 1em;
     padding: 1em;
-    background-color: antiquewhite;
-    border-radius: 5px;
+
+        /* background-color: antiquewhite;
+        border-radius: 5px; */
+    outline: solid limegreen;
+    background-color: black;
+
 }
 
-h1 {
-    writing-mode: vertical-lr;
-    rotate: 180deg;
-    justify-items: flex-end;
-    align-self: start;
-    padding-bottom: 0.5em;
-    }
-
-p {
-        width: 75ch;
-    }
-
 .scroll {
-    overflow: scroll;
+    overflow: scroll ;
 }
 
