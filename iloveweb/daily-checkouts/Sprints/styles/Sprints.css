@@ -37,7 +37,7 @@ body {
 }
 
 main {
-    outline: solid lime;
+    /* outline: solid lime; */
     color: lime;
 
     width: 100%;
@@ -76,7 +76,7 @@ p {
     font-family: arial;
     font-size: medium;
     /* width: 75ch; */
-    width: 35ch;
+    /* width: 60ch; */
     
     font-family: PixerMCBixer;
 }
