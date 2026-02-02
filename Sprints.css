@@ -1,12 +1,15 @@
-* {
+* { 
     line-height: 1.4em;
     margin: 0;
     background-color: black;
+    font-family: PixerMCBixer, arial;
+;
 }
 
+
 @font-face {
-    font-family:PixerMCBixer;
-    src: url(/fonts/PixerMCBixerV5-Regular.ttf);
+    font-family: PixerMCBixer;
+    src: url(./fonts/PixerMCBixerV5-Regular.ttf);
 }
 
 header {
@@ -55,30 +58,23 @@ main {
 }
 
 a {
-    font-family: PixerMCBixer;
     font-weight: bold;
     color: white;
+    cursor: pointer;
 }
 
 h1 {
-    font-family: arial;
     font-size: 20px;
     writing-mode: vertical-lr;
     rotate: 180deg;
     justify-items: flex-end;
     align-self: start;
     padding-bottom: 0.5em;
-
-    font-family: PixerMCBixer;
 }
 
 p {
-    font-family: arial;
     font-size: medium;
-    /* width: 75ch; */
-    /* width: 60ch; */
-    
-    font-family: PixerMCBixer;
+    width: 65ch;
 }
 
 .small {
@@ -126,10 +122,11 @@ p {
 }
 
 section {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    height: fit-content;
+    /* grid-template-columns: 1fr; */
     gap: 1em;
-    justify-content: fill;
+    /* justify-content: fill; */
 }
 
 /* als de checkout een link heeft krijgt het deze tag */
