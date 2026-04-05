@@ -1,0 +1,292 @@
+padding* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Minecraft;
+  src: url(public/minecraft/Minecraft.ttf);
+}
+
+.link {
+  color: black;
+  text-decoration: none;
+  font-style: normal;
+  font-size: 250%;
+}
+
+p {
+  font-size: 1em;
+
+  @media (min-width: 450px) {
+    font-size: 1.2em;
+  }
+
+  @media (min-width: 850px) {
+    font-size: 1.5em;
+  }
+}
+
+.small {
+  font-size: 80%;
+}
+
+h1 {
+  font-size: 2em;
+
+  @media (min-width: 450px) {
+    font-size: 2.5em;
+  }
+
+  @media (min-width: 850px) {
+    font-size: 3em;
+    padding: none;
+  }
+}
+
+:root {
+  --minecraft-pixel-size: 32px;
+}
+
+body {
+  background: url(public/oak-log-texture.jpg);
+  margin: 0;
+  justify-self: center;
+  justify-content: center;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.profile-card-archievements {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @media (min-width: 850px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+/* achtergrond voor article heeft een minecraft sign texture en het minecraft font */
+.profile-card-background {
+  font-family: Minecraft, arial;
+  background-image: url(public/Blank-sign-oak.png);
+  filter: drop-shadow(30px 30px 20px #3d2f20);
+  background-size: 100%;
+  /* min-width: 320px; */
+  background-repeat: repeat;
+  margin: 2em 0 4em 0;
+  padding: 1em;
+
+  @media (min-width: 450px) {
+    width: 380px;
+    height: auto;
+  }
+
+  @media (min-width: 850px) {
+    padding-bottom: 4.5em;
+    width: 600px;
+    height: auto;
+  }
+}
+
+/* iets van een randje dat lijkt op een minecraft painting */
+img.profile-card-portrait-img {
+  height: 150px;
+  width: auto;
+  filter: drop-shadow(30px 30px 20px #3d2f20);
+  border: 16px ridge rgb(193 154 107 / 0.6);
+
+  @media (min-width: 450px) {
+    width: 200px;
+    height: auto;
+  }
+}
+
+/* bordje draaien animatie */
+article.profile-card-background.card-back {
+  height: 380px;
+}
+
+article.profile-card-background.card-front {
+  height: 380px;
+}
+
+article.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-back {
+  /* position: absolute; */
+  transform: rotateY(180deg);
+}
+
+.card {
+  background-color: none;
+  width: 100%;
+  height: 100%;
+  perspective: 1000px;
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.card-inner {
+  width: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
+
+/* voor mobile layout verstopte items */
+#mobile-view {
+  @media (max-width: 450px) {
+    display: none;
+  }
+
+  @media (max-width: 850px) {
+    display: none;
+  }
+}
+
+/* voor pc layout verstopte items */
+#pc-view {
+  @media (min-width: 850px) {
+    display: none;
+  }
+}
+
+/* minecraft hendel
+img.lever {
+  transform-origin: center 31%;
+}
+
+img.lever.active  {
+  rotate: 180deg;
+
+  .profile-card-background {
+    background: black;
+  }
+}
+
+.lever-img {
+  margin: 5em 0 5em 0;
+  justify-content: center;
+  transform-origin: center 135px;
+}
+
+.lever-img.active {
+  rotate: 180deg;
+} */
+
+article {
+  text-align: center;
+  justify-content: center;
+  height: 500px;
+}
+
+.lever-container {
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* De 3d hendel classes */
+/* hier de container van de 3d hendel */
+
+/* de stenen achterkant */
+.lever-backside {
+  position: absolute;
+  display: grid;
+  width: calc(5*var(--minecraft-pixel-size));
+  height: calc(7*var(--minecraft-pixel-size));
+  background: url(public/cobblestone-texture.png);
+  background-size: cover;
+}
+
+/* de div class waar alle onderdelen in zitten */
+#lever {
+  scale: 110%;
+  perspective: 800px;
+  perspective-origin: 30px 0;
+  top: 65%;
+  left: 30%;
+  position: absolute;
+  z-index: 5;
+  transform-origin: var(--minecraft-pixel-size) var(--minecraft-pixel-size) calc(-9*var(--minecraft-pixel-size));
+  transform: rotate3d(1, 0, 0, 30deg);
+  transition: transform 0.2s ease-out;
+  transform-style: preserve-3d;
+}
+
+#lever.active {
+  transform: rotate3d(1, 0, 0, -30deg);
+}
+
+#lever-top {
+  position: absolute;
+  left: 0;
+  bottom: calc(2*var(--minecraft-pixel-size));
+  width: calc(2*var(--minecraft-pixel-size));
+  height: calc(10*var(--minecraft-pixel-size));
+  background: url(public/minecraft-lever-handle-top.png);
+  background-size: cover;
+  transform-origin: bottom left;
+  transform: rotate3d(1, 0, 0, 90deg);
+}
+
+#lever-front {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: calc(2*var(--minecraft-pixel-size));
+  height: calc(2*var(--minecraft-pixel-size));
+  background: url(public/minecraft-lever-handle-front.png);
+  background-size: cover;
+  transform: translate3d(0, 0, -1, calc(10*var(--minecraft-pixel-size)));
+}
+
+#lever-bottom {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: calc(2*var(--minecraft-pixel-size));
+  height: calc(9*var(--minecraft-pixel-size));
+  background: url(public/minecraft-lever-handle-bottom.png);
+  background-size: cover;
+  transform-origin: top left;
+  transform: rotate3d(1, 0, 0, -90deg);
+}
+
+.lamp {
+  display: none;
+  width: 200px;
+  height: auto;
+}
+
+#lamp-off {
+  display: block;
+}
+
+#lamp-on {
+  display: none;
+}
+
+#lamp-off.active {
+  display: none;
+}
+
+#lamp-on.active {
+  display: block;
+}
