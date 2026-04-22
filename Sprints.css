@@ -117,6 +117,12 @@ p {
     padding: 0.5em 3em 0.5em 0.5em;
 }
 
+.navKnop.selected {
+    background: var(--highlight-color);
+    color: var(--background-color);
+    clip-path: polygon(90% 0, calc(95% - 1.5em) 50%, 90% 100%, 0 100%, 0 0);
+}
+
 /* hover function met vlaggetje clipper */
 .navKnop:hover,
 .navKnop:focus-visible {
