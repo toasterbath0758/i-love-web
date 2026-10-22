@@ -1,0 +1,244 @@
+/* zelf gemaakt font */
+@font-face {
+    font-family: PixerMCBixer;
+    src: url(/fonts/PixerMCBixerV5-Regular.ttf);
+}
+
+:root {
+    --highlight-color: lime;
+    --background-color: black;
+    --emphasize-color: white;
+}
+
+* {
+    line-height: 1.4em;
+    margin: 0;
+    font-family: PixerMCBixer, arial;
+}
+
+header {
+    min-width: 265;
+    background-color: green;
+    color: white;
+    margin: 0;
+    margin-bottom: 2em;
+    padding: 2em;
+    /* width: 100%; */
+
+}
+
+body {
+    width: 100vw
+}
+
+body {
+
+     
+
+div.circle {
+    z-index: 100;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%,   79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  --circle-size: 50px;
+    position: fixed;
+    height: var(--circle-size);
+    width: var(--circle-size);
+
+
+    border-radius: 100%;
+    background: black;
+    /* cursor: display: none; */
+    pointer-events: none;
+  /* cursor: url('/vis.web/assets/langezalm.png'), pointer; */
+
+
+  /* clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%,   79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); */
+  
+  top: calc(var(--circle-size) / 2 * -1);
+  left: calc(var(--circle-size) / 2 * -1);
+  pointer-events: none;
+}
+}
+
+
+
+
+
+main {
+    height: 100vw;
+}
+
+/* image sizes voor de vissen zodat ze er goed uitzien in verhouding van elkaar */
+.medium {
+    width: 100px;
+}
+
+.large {
+    width: 150px;
+}
+
+.larger {
+    width: 180px;
+}
+
+
+/* dit is wat er om de section.vis heenzit */
+section.grid {
+    gap: 2em;
+
+    @media (min-width: 320px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center
+    }
+
+    @media (min-width: 600px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        place-items: center;
+        margin: 0 4em 0 4em;
+    }
+
+    @media (min-width: 850px) {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+    }
+}
+
+section.wrapper {
+
+position: relative;
+margin-bottom: 0;
+
+}
+
+/* dit is de section waarin de vissen worden gedisplayed met een title (h2) 
+en een figure met een img met een figcaption */
+section.vis {
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    height: 150px;
+    padding: 1em;
+    outline: solid black 3px;
+    background: white;
+    align-items: center;
+
+
+    img {
+        transition: 0.2s ease-in-out;  
+    }
+    
+
+    h2 {
+        font-size: large;
+    }
+
+    h3 {
+        font-size: 0.8em;
+    }
+
+    p {
+        font-size: 0.8em;
+    }
+}
+
+    .klikbaar {
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        z-index: 10;
+
+        p {
+            margin-top: auto;
+        }
+    }
+
+    .descriptie {
+        position: absolute;
+        left: 0;
+        top: 0; 
+        z-index: 1;
+        margin-top: 0;
+        outline: none;
+        background: blue;
+        transition: 0.2s ease-in-out;
+    }
+
+    section.klikbaar:hover + .descriptie {
+        top: 100%;
+        
+        section.klikbaar:hover {
+            height: 200%;
+        }
+    }
+
+    section.descriptie:hover {
+        top: 100%;
+    }
+
+
+
+
+
+
+
+section.klikbaar:hover {
+
+    background: green;
+    color: white;
+    outline: none;
+
+    p {
+        display: none;
+    }
+
+    img {
+        scale: 130%;
+
+        animation: wiebel 0.4s ease-in-out infinite alternate;
+
+        filter: contrast(1)
+         drop-shadow(0px 2px 0px white) 
+         drop-shadow(0px -2px 0px white) 
+         drop-shadow(-2px 0px 0px white) 
+         drop-shadow(2px 0px 0px white);
+    }
+}
+
+@keyframes wiebel {
+    0% {
+        transform: rotate(-5deg);
+    }
+
+    100% {
+        transform: rotate(5deg);
+    }
+}
+
+
+section.add {
+    outline: solid black 3px;
+    display: grid;
+    width: fit-content;
+    padding: 1em;
+    margin: 5em;
+
+    input {
+        border: none;
+        appearance: none;
+        outline: solid black 3px;
+        margin-bottom: .5em;
+    }
+
+    textarea {
+        border: none;
+        margin-bottom: 1em;
+        appearance: none;
+        outline: solid black 3px;
+    }
+
+
+
+
+}

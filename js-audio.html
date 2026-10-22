@@ -1,0 +1,18 @@
+<!doctype html>
+<title>Audio met JS</title>
+<script type="module">
+// Laad het geluid in
+
+const button = document.querySelector('#btn');
+
+button.addEventListener('click', function() {
+    const audioElement = new Audio("assets/Bad Boombox - Borat's Disko [badass bootlegs vol.6].mp3")
+    // Speel het geluid af
+    audioElement.addEventListener("canplaythrough", (event) => {
+    let duration = audioElement.duration;
+    audioElement.play()
+  // The duration variable now holds the duration (in seconds) of the audio clip
+});
+});
+</script>
+<button id="btn">PLAY</button>

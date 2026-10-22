@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="nl">
+<title>BVFD</title>
+
+<main>
+<style>
+/* sectionclass van de jouw-suggestie page */
+form.form {
+    display: flex;
+    width: fit-content;
+    flex-direction: column;
+    justify-self: center;
+    gap: 0.5em;
+
+    input {
+        width: 250px;
+        padding: 0.5em;
+        border: solid 0.1em lightslategray;
+        border-radius: 5em;
+        border-style: default;
+        align-self: center;
+    }
+
+    label {
+        align-self: start center;
+    }
+
+    input.button {
+        width: 100px;
+        justify-self: end center;
+        border: none;
+    }
+}
+</style>
+
+<a href="/suggesties" class="terug knop"><img src="../imgs/undo.svg" alt="terug"></a>
+
+<form action="/jouw-suggestie" method="POST" class="form">
+    <label for="plant">Welke plant zou jij willen zien in de tuin?</label>
+    <input id="plant" name="suggestion" type="text" placeholder="plant..." alt="suggestie textveld" required>
+
+    <label for="reden">Waarom zou je dit willen zien?</label>
+    <input id="reden" name="suggestion_reason" type="text" placeholder="waarom?..." alt="reden textveld" required>
+  
+    <input class="button verstuur" type="submit" value="verstuur" alt="verstuurknop">
+</form>
+
+</main>
+
+
+/////////////////////////////////////////////////
+// POST + DELETE GEDEELTE KEVIN
+
+app.post('/jouw-suggestie', async (request, response) => {
+
+   console.log(request)
+   // Stuur een POST request naar de messages tabel
+   // Een POST request bevat ook extra parameters, naast een URL
+   const postResponse = await fetch('https://fdnd-agency.directus.app/items/frankendael_suggestions', {
+
+      // Overschrijf de standaard GET method, want ook hier gaan we iets veranderen op de server
+      method: 'POST',
+      // Geef de body mee als JSON string
+      body: JSON.stringify({
+         // de variabelen uit de database 
+         suggestion: request.body.suggestion,
+         suggestion_reason: request.body.suggestion_reason
+      }),
+      headers: {
+         'Content-Type': 'application/json',
+      }
+
+      // En vergeet deze HTTP headers niet: hiermee vertellen we de server dat we JSON doorsturen
+      // (In realistischere projecten zou je hier ook authentication headers of een sleutel meegeven)
+   });
+
+   // Stuur de browser daarna weer naar de homepage
+   response.redirect(303, '/suggesties')
+})
+
+
+// maak een delete route aan
+app.post('/suggesties/delete/:id', async (request, response) => {
+
+   const idsuggestion = request.params.id
+   // Een POST request bevat ook extra parameters, naast een URL
+   await fetch(`https://fdnd-agency.directus.app/items/frankendael_suggestions/${idsuggestion}`, {
+
+      // Overschrijf de standaard GET method, want ook hier gaan we iets vdeleten van de server
+      method: 'DELETE'
+   });
+
+   // Stuur de browser daarna weer naar de homepage
+   response.redirect(303, '/suggesties')
+})
+// EINDE POST + DELETE GEDEELTE
+///////////////////////////////////////////////

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="nl">
+<title>BVFD</title>
+
+<main>
+<style>
+
+main {
+    background: var(--light-background);
+}
+
+
+/* ul styling van de suggesties op de suggesties pagina */
+.collectionSuggesties {
+    flex-direction: row;
+    margin-bottom: 13em;
+
+    /* li styling van de suggesties op de suggesties pagina */
+    li {
+        background: var(--light-background);
+        color: var(--dark-text);
+
+        display: flex;
+        padding: 1em;
+        border-radius: 1em;
+        margin-bottom: 1em;
+        justify-content: space-between;
+
+        &:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 
+            0 16px 36px black
+            0 4px 10px black;
+        }
+
+    }
+
+    /* de votes section */
+    section {
+        display: flex;
+        gap: 1em;
+    }
+
+    /* vote emoji's */
+    p {
+        width: fit-content;
+    }
+
+    form {
+        justify-content: center;
+        align-content: center;
+    }
+}
+
+</style>
+
+<h1>suggesties</h1>
+
+ <ul class="collectionSuggesties">
+    {% for suggestion in suggestions %}
+      <li>
+        {% comment %} de eerste sugg is alle data uit de database, de tweede sugg is de variabele uit de database in het id {% endcomment %}
+        <h4>{{ suggestion.suggestion }}</h4>
+        <section>
+        {% comment %} hier miss de voting system nog even laten zitten want snap dit nog niet
+        een issue ervan maken? {% endcomment %}
+        <form method="POST" action="/suggesties/delete/{{ suggestion.id }}">
+          <button type="submit" class="delete">delete</button>
+          </form>
+        </section>
+      </li>
+    {% endfor %}
+  </ul>
+
+    <a href="/jouw-suggestie" class="toevoegen knop"><img src="/imgs/add.svg" alt="toevoegen"></a>
+</main>
+
+
+
+{% comment %} /////////////////////////// {% endcomment %}
+<a href="/" class="terug knop"><img src="../imgs/undo.svg" alt="terug"></a>

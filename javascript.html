@@ -1,0 +1,95 @@
+loading state tonen
+data fetchen
+data verwerken
+loading state weghalen
+
+data toevoegen aan de DOM
+
+
+pseudo code ^^
+dit schrijven bij de figma schetsen
+
+maak een js script zonder comments
+1. om te kijken ofdat je het begrijpt zonder comments
+2. code ziet er clean uit
+3. beter te lezen
+
+<script type="module">
+
+een module is een script (js)
+je kan je js code opdelen in kleine modules
+
+je kan zo je code opdelen in behapbare stukken die bij elkaar horen
+
+
+browser die de code niet kan lezen voert de server.js uit.
+zo kan de code werken zonder de enhancements (loading states, success states)
+werken.
+
+
+action="" > action="https//localhost:8000/page"
+^ hierin staat op welke pagina de data word gedisplayed
+
+hierbij moet dan een method="post"
+
+
+client.js
+eerst de 
+// VARIABELE
+// maak variabele aan
+const scoreForm = document.querySelector("form")
+
+// haalt data uit de form
+const formButton = form.querySelector("form button")
+
+
+const scores = document.querySelector("#score ol")
+
+
+// CODE LOGIC
+scoreForm.addEventListener("submit", async function(event) {
+event.preventDefault()
+
+// maak de loading state aan in js
+formButton.classList.add("loading")
+formButton.textContent = "loading..."
+
+console.log(typeof FormData)
+
+
+// vragen wat de action is van de scoreform
+const response = await fetch(scoreform.action, {
+    method: scoreForm.method,
+    body: new URLSearchParams(formData)
+})
+
+
+}))
+
+
+// FUNCTION DECLARATIES
+
+// dit in de console invoeren in browser
+function Bottle (){
+    this.brand = 'dopper'
+    this.drink = function (liquid) {
+        return liquid
+    }
+}
+
+const myDopper = new Bottle('dopper')
+
+myDopper.brand
+
+// de functie geeft een object terug
+
+
+
+normaal kan je niet de body opvragen je moet dit doen in de form post route
+met stringify
+request.body
+
+DOMParser maakt het zodat er niet een pagerefresh hoeft om nieuwe data te laden
+
+afterbegin
+scores

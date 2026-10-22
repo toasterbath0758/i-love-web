@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../form DoD/form.css">
+</head>
+
+    <section class="WLW">
+        <h1>WE LOVE WEB spreker: justus</h1>
+        <p>docent</p> 
+        <h2>over digital gardening</h2>
+
+        <p> 
+            hij vertelt alleen over dingen die hij interessant vind
+            erg leuk!
+            
+            maak een digital garden...
+        </p>
+    </section>
+
+
+</body>
+
+</html>

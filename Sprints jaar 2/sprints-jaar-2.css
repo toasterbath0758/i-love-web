@@ -1,0 +1,98 @@
+* { 
+    line-height: 1.4em;
+    margin: 0;
+    background: var(--background-color);
+    font-family: PixerMCBixer, arial;
+}
+
+/* zelf gemaakt font */
+@font-face {
+    font-family: PixerMCBixer;
+    src: url(/fonts/PixerMCBixerV5-Regular.ttf);
+}
+
+:root {
+    --highlight-color: lime;
+    --background-color: black;
+    --text-color: white;
+}
+
+p {
+    color: var(--text-color);
+}
+
+a {
+    color: var(--highlight-color);
+}
+
+header {
+    font-family: arial;
+    width: 100%;
+    outline: solid var(--text-color);
+    margin-bottom: 1em;
+
+#navList {
+    display: flex;
+    width: 100%;
+    padding: 0;
+    gap: 0em;
+    list-style: none;
+    text-decoration: none;
+    justify-content: center;
+    translate: center;
+    white-space: nowrap;
+    flex-wrap: wrap;
+}
+
+/* knoppen in de nav */
+.navKnop {
+    color: var(--emphasize-color);
+    padding-right: 2rem;
+    translate: 0 0;
+    padding: 0.5em 3em 0.5em 0.5em;
+    margin: 1em;
+}
+
+.navKnop.selected {
+    background: var(--highlight-color);
+    color: var(--background-color);
+    clip-path: polygon(90% 0, calc(95% - 1.5em) 50%, 90% 100%, 0 100%, 0 0);
+}
+
+/* hover function met vlaggetje clipper */
+.navKnop:hover,
+.navKnop:focus-visible {
+    background: var(--highlight-color);
+    color: var(--background-color);
+    /* padding-right: 2rem; */
+    clip-path: polygon(90% 0, calc(95% - 1.5em) 50%, 90% 100%, 0 100%, 0 0);
+    
+}
+
+/* kleurverrandering als je klikt op de navKnop */
+.navKnop:active {
+    color: var(--text-color);
+}
+}
+
+body {
+    padding: 1em 5em;
+    color: var(--text-color);
+
+    section {
+        padding-bottom: 1em;
+    }
+
+    section.outline {
+        padding: 1em;
+        outline: solid var(--text-color);
+
+        margin-top: 1em;
+
+    }
+
+    p {
+        font-weight: 800;
+    }
+
+}
