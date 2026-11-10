@@ -11,6 +11,7 @@
     src: url(/fonts/PixerMCBixerV5-Regular.ttf);
 }
 
+
 :root {
     --highlight-color: lime;
     --background-color: black;
@@ -40,8 +41,11 @@ header {
     text-decoration: none;
     justify-content: center;
     translate: center;
-    white-space: nowrap;
     flex-wrap: wrap;
+
+    li {
+        list-style: none;
+    }
 }
 
 /* knoppen in de nav */
@@ -54,7 +58,7 @@ header {
 }
 
 .navKnop.selected {
-    background: var(--highlight-color);
+    background: var(--text-color);
     color: var(--background-color);
     clip-path: polygon(90% 0, calc(95% - 1.5em) 50%, 90% 100%, 0 100%, 0 0);
 }
@@ -76,23 +80,53 @@ header {
 }
 
 body {
-    padding: 1em 5em;
+    padding: 1em 1em;
     color: var(--text-color);
+}
 
-    section {
-        padding-bottom: 1em;
-    }
+section {
+    padding-bottom: 1em;
+}
 
-    section.outline {
-        padding: 1em;
-        outline: solid var(--text-color);
+/* outline wit */
+.outline {
+    padding: 1em;
+    outline: solid var(--text-color);
+    margin-top: 1em;
+}
 
-        margin-top: 1em;
+/* outline op hover groen */
+.outline:hover {
+    outline: solid var(--highlight-color);
+}
 
-    }
+/* outline altijd, geen hover */
+.outline2 {
+    padding: 1em;
+    outline: solid var(--text-color);
+    margin-top: 1em;
+}
 
-    p {
-        font-weight: 800;
-    }
+/* outline alleen zichtbaar op hover */
+.outline3:hover {
+    outline: solid var(--highlight-color);
+}
 
+li {
+    list-style: square;
+}
+
+h3 {
+    font-weight: 300;
+    font-size: 22px;
+}
+
+h4 {
+    font-weight: 300;
+    font-size: 18px;
+}
+
+
+p {
+    font-weight: 800;
 }
